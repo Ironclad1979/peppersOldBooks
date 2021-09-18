@@ -1,0 +1,355 @@
+html{
+    font-family:'Times New Roman', Times, serif inter, sans-serif;
+    scroll-behavior: smooth; 
+    font-weight: bold;
+}
+
+
+
+section{
+    
+    width: 100%;
+    height: 100vh;
+    overflow:auto;
+    overflow-x: visible;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    }
+
+a{
+    color: white;
+}
+
+
+@media (max-width: 900px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        }
+}
+
+@media (max-width:900px){
+    nav ul {
+        font-size: 20%;
+    }
+}
+
+nav{
+    font-size: 1.25em;
+    background-color:#6b705c;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    display: inline;
+    display:flex;
+    justify-content:space-around;
+    align-items: center; 
+}
+
+#navbar {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    color: white;
+}
+
+
+@media (max-width:450px){
+    #navbar li{
+        display: flex;
+        flex-direction: column;
+    }
+}
+span{
+    opacity: 0;
+    transition: ease-in-out 1;
+}
+
+span.fade{
+    opacity: 1;
+}
+ 
+
+ul, li {
+    display: inline;
+    margin: 10px;
+}
+
+h3{
+    color: white;
+    font-family:'Courier New', Courier, monospace
+}
+
+
+/* HOME PAGE */
+
+
+#home{
+    display: flex;
+    justify-content: space-around;
+    align-items:space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background: #a5a58d;    
+}
+
+h1{
+    color: azure;
+    font-family:fantasy;
+    font-size: 50px;
+}
+
+.coffee{
+    height:100px;
+    width: 100px;
+    margin: 100px;
+    animation-name: tip;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+  } 
+
+  @keyframes tip{
+      0% {transform: translate(20px, 0px);}
+      50% {transform: translate(10px, 15px);}
+      100% {transform: translate(20px, -0px);}
+  }
+
+   
+
+.mug{ 
+    height:100px;
+    width: 100px;
+    animation-name: float;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  } 
+
+  @keyframes float{
+    0% {transform: rotate3d(1, 2.0, 3.0, 10deg);}
+    50% {transform: rotate3d(2, 3.0, 4.0, 20deg);}
+    100% {transform: rotate3d(1, 2.0, 3.0, 10deg);}
+   
+  }
+  
+
+
+.bookIcon{
+    height:200px;
+    width: 200px;
+    animation-name: shake;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+  } 
+
+  @keyframes shake{
+    0% {transform: translate(0, 0px);}
+    50% {transform: translate(0, 15px);}
+    100% {transform: translate(0, -0px);}
+  }
+    
+    
+}
+
+
+
+  
+  
+/* BOOK PAGE  */
+
+
+#books{
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: #ffe8d6;
+    
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+    
+
+.shop{
+    height:70vh;
+    width: 70vw;
+    background-color:#f4f1de;
+    border-color:#BF8176;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.118),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.17),
+    0 12.5px 10px rgba(0, 0, 0, 0.21),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.25),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.302),
+    0 100px 80px rgba(0, 0, 0, 0.42);
+
+}
+
+.bookDivid :nth-last-of-type(1){
+    border-left: violet;
+    border-width: 7px;
+}
+
+.shopCard{
+    height: 80%;
+    width: 40%;
+}
+
+.bookTitle{
+    height: 10%;
+    width: 100%;
+    
+    text-align: center;
+}
+
+.bookImage{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bookTemplate{
+    height: 200px;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookDescription{
+    height: 30%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bookPrice{
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* CONTACT */
+
+
+#contactPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color:#ffe8d6;
+}
+
+.envelope{
+    height: 100px;
+    width: 100px;
+}
+
+.contactCard{
+    width:500px;
+    height:700px;
+    border-radius:40px;
+    border: 7px solid;
+    border-color:white;
+    background-color:#EBECF0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+form.form-example {
+    display: table;
+}
+
+#name{
+    height: 20px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#email{
+    height: 20px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#message{
+    height: 20px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#submit{
+    height: 50px;
+    width: 200px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    border-color: white;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+#aboutUS{
+    background-color: #ddbea9;
+}
